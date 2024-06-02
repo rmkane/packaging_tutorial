@@ -10,17 +10,16 @@ help:
 	@awk 'BEGIN {FS = ":.*#"; printf "Usage: make [target]\n\nTargets:\n"} /^[a-zA-Z_-]+:.*?#/ { printf "  %-15s %s\n", $$1, $$2 }' $(MAKEFILE_LIST)
 
 # Create virtual environment
-create_venv: $(VENV_DIR)/bin/activate # Create virtual environment and install build and twine modules
+create_venv: $(VENV_DIR)/bin/activate # Create virtual environment
 
 $(VENV_DIR)/bin/activate:
 	$(PYTHON) -m venv $(VENV_DIR)
 	. $(VENV_DIR)/bin/activate && pip install --upgrade pip
-	. $(VENV_DIR)/bin/activate && pip install build
-	. $(VENV_DIR)/bin/activate && pip install --upgrade twine
 
 # Activate virtual environment
-activate: create_venv # Activate the virtual environment
+activate: create_venv # Activate the virtual environment and install build and twine modules
 	@echo "source $(VENV_DIR)/bin/activate"
+	. $(VENV_DIR)/bin/activate && pip install build twine
 
 # Build target
 build: activate # Set up virtual environment and run build
@@ -32,7 +31,6 @@ upload: build # Build the project and upload to PyPI
 
 # Clean target
 clean: # Remove virtual environment and build artifacts
-	rm -rf $(VENV_DIR)
-	rm -rf dist
+	rm -rf $(VENV_DIR) dist/
 
 .PHONY: all build clean help create_venv activate upload

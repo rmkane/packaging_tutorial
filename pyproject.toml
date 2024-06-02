@@ -4,9 +4,9 @@ build-backend = "hatchling.build"
 
 [project]
 name = "example_package_rmkane"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
-    { name = "Example Author", email = "author@example.com" },
+    { name = "Ryan Kane", email = "rmkane@proton.me" },
 ]
 description = "A small example package"
 readme = "README.md"
@@ -18,5 +18,5 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/pypa/sampleproject"
-Issues = "https://github.com/pypa/sampleproject/issues"
+Homepage = "https://github.com/rmkane/packaging_tutorial"
+Issues = "https://github.com/rmkane/packaging_tutorial/issues"
