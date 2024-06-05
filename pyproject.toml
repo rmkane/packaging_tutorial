@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "example_package_rmkane"
-version = "0.0.4"
+version = "0.0.5"
 description = "A small example package"
 authors = ["Ryan Kane <rmkane@proton.me>"]
 readme = "README.md"
@@ -17,11 +17,11 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = ">=3.8"
-pytest = "^8.2.1"
+pytest = "^8.2.2"
 
 [tool.poetry.dev-dependencies]
 black = "^24.4.2"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=1.8.3"]
 build-backend = "poetry.core.masonry.api"

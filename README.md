@@ -4,6 +4,19 @@ This is a simple example package. You can use
 [GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
 to write your content.
 
+## Setup
+
+Configure the TestPyPI repository and token:
+
+```sh
+poetry config repositories.test-pypi https://test.pypi.org/legacy/
+poetry config pypi-token.test-pypi <your-token>
+```
+
+On macOS, the file is located at `~/Library/Application\ Support/pypoetry/config.toml`
+
+Source: [_using python-poetry to publish to test.pypi.org_](https://stackoverflow.com/a/72524326/1762224)
+
 ## Build Instructions
 
 This project uses a Makefile for managing build tasks. Here are some of the commands you can use:
