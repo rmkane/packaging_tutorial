@@ -23,6 +23,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - N/A
 
+## [0.0.7] - 2024-06-04
+
+### Added
+
+- Poetry now bundles the changelog
+
 ## [0.0.6] - 2024-06-04
 
 ### Added
