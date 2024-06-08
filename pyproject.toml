@@ -20,11 +20,12 @@ packages = [
 include = ["CHANGELOG.md"]
 
 [tool.poetry.dependencies]
-python = ">=3.8"
-pytest = "^8.2.2"
+python = ">=3.9"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
 black = "^24.4.2"
+sphinx = "^7.3.7"
 
 [build-system]
 requires = ["poetry-core>=1.8.3"]

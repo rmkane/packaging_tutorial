@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+"""
+This is an example module for the example_package_rmkane package.
+"""
+
 
 def add_one(number: int) -> int:
     """

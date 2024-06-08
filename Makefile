@@ -7,7 +7,8 @@ all: build
 
 # Help target
 help:
-	@awk 'BEGIN {FS = ":.*#"; printf "Usage: make [target]\n\nTargets:\n"} /^[a-zA-Z_-]+:.*?#/ { printf "  %-15s %s\n", $$1, $$2 }' $(MAKEFILE_LIST)
+	@printf "Usage: make \033[1;34m[target]\033[0m\n\nTargets:\n"
+	@awk 'BEGIN {FS = ":.*#"} /^[a-zA-Z_-]+:.*?#/ { printf "  \033[1;34m%-15s\033[0m %s\n", $$1, $$2 }' $(MAKEFILE_LIST)
 
 # Create virtual environment and install Poetry
 create_venv: $(VENV_DIR)/bin/activate # Create virtual environment and install Poetry
@@ -22,7 +23,7 @@ activate: create_venv # Activate the virtual environment
 
 # Install project dependencies using Poetry
 install_deps: create_venv # Install project dependencies
-	. $(VENV_DIR)/bin/activate && poetry install
+	. $(VENV_DIR)/bin/activate && poetry install --with dev
 
 # Build target
 build: install_deps # Set up virtual environment and run build
@@ -41,7 +42,25 @@ format: install_deps # Format code using black
 	. $(VENV_DIR)/bin/activate && poetry run black .
 
 # Clean target
-clean: # Remove virtual environment and build artifacts
-	rm -rf $(VENV_DIR) dist/
+clean: # Remove build artifacts
+	rm -rf dist/
 
-.PHONY: all build clean help create_venv activate install_deps upload test format
+# Clean all generated files
+clean_all: clean # Remove virtual environment, build artifacts, and __pycache__ directories
+	rm -rf $(VENV_DIR)
+	find . -type d -name "__pycache__" -exec rm -rf {} +
+	rm -rf docs/_build
+
+# Generate Sphinx .rst files
+apidoc: install_deps # Generate Sphinx .rst files
+	. $(VENV_DIR)/bin/activate && poetry run sphinx-apidoc -o docs/source/ src/example_package_rmkane
+
+# Build Sphinx documentation
+docs: apidoc # Build Sphinx documentation
+	. $(VENV_DIR)/bin/activate && poetry run sphinx-build -b html docs/source docs/_build
+
+# Main targets
+.PHONY: all build clean docs help format test upload
+
+# Secondary targets
+.PHONY: activate apidoc clean_all create_venv install_deps
