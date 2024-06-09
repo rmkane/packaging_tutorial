@@ -30,7 +30,10 @@ This project uses a Makefile for managing build tasks. Here are some of the comm
 - `make upload`: Builds the project and uploads it to TestPyPI.
 - `make test`: Runs tests using pytest.
 - `make format`: Formats code using black.
-- `make clean`: Removes the virtual environment and build artifacts.
+- `make clean`: Removes build artifacts.
+- `make clean_all`: Removes the virtual environment, build artifacts, and `__pycache__` directories.
+- `make apidoc`: Generates Sphinx `.rst` files.
+- `make docs`: Builds Sphinx documentation.
 
 ### Commands
 
@@ -72,6 +75,21 @@ This project uses a Makefile for managing build tasks. Here are some of the comm
 8. **Clean Project**:
     ```sh
     make clean
+    ```
+
+9. **Clean All Generated Files**:
+    ```sh
+    make clean_all
+    ```
+
+10. **Generate Sphinx .rst Files**:
+    ```sh
+    make apidoc
+    ```
+
+11. **Build Sphinx Documentation**:
+    ```sh
+    make docs
     ```
 
 Remember to run `source .venv/bin/activate` to activate the virtual environment before running the build commands.

@@ -22,7 +22,7 @@ activate: create_venv # Activate the virtual environment
 	@echo "source $(VENV_DIR)/bin/activate"
 
 # Install project dependencies using Poetry
-install_deps: create_venv # Install project dependencies
+install_deps: activate # Install project dependencies
 	. $(VENV_DIR)/bin/activate && poetry install --with dev
 
 # Build target
