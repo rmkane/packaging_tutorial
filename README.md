@@ -4,6 +4,40 @@ This is a simple example package. You can use
 [GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
 to write your content.
 
+This package is designed to provide [describe functionality]. It's perfect for [describe target audience] and can help
+you to [describe benefits].
+
+## Table of Contents
+
+- [Example Package](#example-package)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [Setup](#setup)
+    - [Build Instructions](#build-instructions)
+        - [Commands](#commands)
+    - [Changelog](#changelog)
+        - [Updating the Changelog](#updating-the-changelog)
+    - [Contributing](#contributing)
+    - [License](#license)
+
+## Installation
+
+To install this package, you can clone the repository using the following command:
+
+```sh
+git clone https://github.com/rmkane/packaging_tutorial.git
+```
+
+## Usage
+
+Here are some examples of how to use this package:
+
+```python
+from example_package_rmkane.example import add_one
+
+print(add_one(1))  # 2
+```
+
 ## Setup
 
 Configure the TestPyPI repository and token:
@@ -98,3 +132,53 @@ This project uses a Makefile for managing build tasks. Here are some of the comm
     ```
 
 Remember to run `source .venv/bin/activate` to activate the virtual environment before running the build commands.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for details.
+
+### Updating the Changelog
+
+To update the changelog, please use the following format:
+
+```markdown
+## [Unreleased]
+
+### Added
+
+- New features that have been added since the last release
+
+### Changed
+
+- Changes to existing functionality
+
+### Deprecated
+
+- Features that will be removed in upcoming releases
+
+### Removed
+
+- Features that have been removed
+
+### Fixed
+
+- Any bug fixes
+
+### Security
+
+- Any security enhancements
+```
+
+## Contributing
+
+We welcome contributions to this project! To contribute:
+
+1. Fork this repository
+2. Create your feature branch (`git checkout -b feature/yourFeature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin feature/yourFeature`)
+5. Create a new [Pull Request](https://github.com/rmkane/packaging_tutorial/pulls)
+
+## License
+
+This project is licensed under the MIT license - see the [LICENSE](LICENSE) file for details.
