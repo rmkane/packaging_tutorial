@@ -23,25 +23,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - N/A
 
+## [0.0.9] - 2024-06-10
+
+### Fixed
+
+- Sort of Makefile targets in README
+
 ## [0.0.8] - 2024-06-10
 
 ### Added
 
 - Sphinx documentation
 
-### Fixed
-
-- N/A
-
 ### Changed
 
 - Updated README
 - Updated Makefile
 - Updated Poetry configuration
-
-### Removed
-
-- N/A
 
 ## [0.0.7] - 2024-06-04
 
