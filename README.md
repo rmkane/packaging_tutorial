@@ -22,18 +22,18 @@ Source: [_using python-poetry to publish to test.pypi.org_](https://stackoverflo
 This project uses a Makefile for managing build tasks. Here are some of the commands you can use:
 
 - `make all`: Default target, sets up the virtual environment and runs the build.
-- `make help`: Shows available make targets.
 - `make create_venv`: Creates a virtual environment and installs Poetry.
 - `make activate`: Activates the virtual environment.
 - `make install_deps`: Installs project dependencies using Poetry.
 - `make build`: Sets up the virtual environment, installs dependencies, and runs the build.
-- `make upload`: Builds the project and uploads it to TestPyPI.
+- `make publish`: Builds the project and uploads it to TestPyPI.
 - `make test`: Runs tests using pytest.
 - `make format`: Formats code using black.
-- `make clean`: Removes build artifacts.
-- `make clean_all`: Removes the virtual environment, build artifacts, and `__pycache__` directories.
 - `make apidoc`: Generates Sphinx `.rst` files.
 - `make docs`: Builds Sphinx documentation.
+- `make clean`: Removes build artifacts.
+- `make clean_all`: Removes the virtual environment, build artifacts, and `__pycache__` directories.
+- `make help`: Shows available make targets.
 
 ### Commands
 
@@ -57,9 +57,9 @@ This project uses a Makefile for managing build tasks. Here are some of the comm
     make build
     ```
 
-5. **Upload to TestPyPI**:
+5. **Publish to TestPyPI**:
     ```sh
-    make upload
+    make publish
     ```
 
 6. **Run Tests**:
@@ -72,24 +72,29 @@ This project uses a Makefile for managing build tasks. Here are some of the comm
     make format
     ```
 
-8. **Clean Project**:
-    ```sh
-    make clean
-    ```
-
-9. **Clean All Generated Files**:
-    ```sh
-    make clean_all
-    ```
-
-10. **Generate Sphinx .rst Files**:
+8. **Generate Sphinx .rst Files**:
     ```sh
     make apidoc
     ```
 
-11. **Build Sphinx Documentation**:
+9. **Build Sphinx Documentation**:
     ```sh
     make docs
+    ```
+
+10. **Clean Project**:
+    ```sh
+    make clean
+    ```
+
+11. **Clean All Generated Files**:
+    ```sh
+    make clean_all
+    ```
+
+12. **Show Available Make Targets**:
+    ```sh
+    make help
     ```
 
 Remember to run `source .venv/bin/activate` to activate the virtual environment before running the build commands.
