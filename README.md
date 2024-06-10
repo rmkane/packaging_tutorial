@@ -10,6 +10,7 @@ you to [describe benefits].
 ## Table of Contents
 
 - [Example Package](#example-package)
+    - [Project Structure](#project-structure)
     - [Installation](#installation)
     - [Usage](#usage)
     - [Setup](#setup)
@@ -19,6 +20,40 @@ you to [describe benefits].
         - [Updating the Changelog](#updating-the-changelog)
     - [Contributing](#contributing)
     - [License](#license)
+
+## Project Structure
+
+The project is managed by Poetry.
+
+Here is the project structure:
+
+```plaintext
+.
+├── docs
+│   └── source
+│       ├── _static
+│       ├── _templates
+│       ├── conf.py
+│       ├── example_package_rmkane.rst
+│       ├── index.rst
+│       └── modules.rst
+├── src
+│   └── example_package_rmkane
+│       ├── __init__.py
+│       └── example.py
+├── tests
+│   ├── __init__.py
+│   └── test_example.py
+├── .editorconfig
+├── .gitignore
+├── CHANGELOG.md
+├── LICENSE
+├── Makefile
+├── README.md
+├── poetry.lock
+└── pyproject.toml
+
+```
 
 ## Installation
 
