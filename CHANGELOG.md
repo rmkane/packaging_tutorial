@@ -9,6 +9,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- N/A
+
+### Fixed
+
+- N/A
+
+### Changed
+
+- N/A
+
+### Removed
+
+- N/A
+
+## [0.0.8] - 2024-06-10
+
+### Added
+
 - Sphinx documentation
 
 ### Fixed
@@ -18,6 +36,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Updated README
+- Updated Makefile
+- Updated Poetry configuration
 
 ### Removed
 
