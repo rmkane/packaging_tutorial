@@ -15,10 +15,10 @@ author = pyproject["tool"]["poetry"]["authors"][0]
 
 # Other Sphinx configuration
 extensions = [
-  "sphinx.ext.autodoc",
-  "sphinx.ext.napoleon",
-  "sphinx.ext.viewcode",  # Include links to the source code
-  "sphinx.ext.githubpages",  # Suitable for publishing to GitHub Pages
+    "sphinx.ext.autodoc",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.viewcode",  # Include links to the source code
+    "sphinx.ext.githubpages",  # Suitable for publishing to GitHub Pages
 ]
 templates_path = ["_templates"]
 exclude_patterns = []
